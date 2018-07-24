@@ -1,0 +1,463 @@
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1
+$ git config --global user.name
+Sviatlana Zakharenka
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1
+$ git config --global user.email
+sviatlana_zakharenka@epam.com
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1
+$ git init
+Initialized empty Git repository in C:/D/git-train-htp9/dev1/.git/
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .classpath
+        .project
+        .settings/
+        pom.xml
+        target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 (master)
+$ git add pom.xml
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   pom.xml
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .classpath
+        .project
+        .settings/
+        target/
+
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 (master)
+$ git commit -m "pom.xml was added to project"
+[master (root-commit) 8faa31b] pom.xml was added to project
+ 1 file changed, 22 insertions(+)
+ create mode 100644 pom.xml
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 (master)
+$ git log
+commit 8faa31b415920e0c34d671222c2854537cc56c0f
+Author: Sviatlana Zakharenka <sviatlana_zakharenka@epam.com>
+Date:   Tue Jul 24 19:52:37 2018 +0300
+
+    pom.xml was added to project
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   pom.xml
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .classpath
+        .project
+        .settings/
+        target/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 (master)
+$ git add pom.xml
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 (master)
+$ git commit -m "comment to pom.xml was added"
+[master 694a3fc] comment to pom.xml was added
+ 1 file changed, 1 insertion(+)
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 (master)
+$ git log
+commit 694a3fcea8717148744d8457450fdffa7a3ca7b2
+Author: Sviatlana Zakharenka <sviatlana_zakharenka@epam.com>
+Date:   Tue Jul 24 19:58:08 2018 +0300
+
+    comment to pom.xml was added
+
+commit 8faa31b415920e0c34d671222c2854537cc56c0f
+Author: Sviatlana Zakharenka <sviatlana_zakharenka@epam.com>
+Date:   Tue Jul 24 19:52:37 2018 +0300
+
+    pom.xml was added to project
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 (master)
+$ git checkout 8faa31b
+Note: checking out '8faa31b'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 8faa31b... pom.xml was added to project
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((8faa31b...))
+$ git log
+commit 8faa31b415920e0c34d671222c2854537cc56c0f
+Author: Sviatlana Zakharenka <sviatlana_zakharenka@epam.com>
+Date:   Tue Jul 24 19:52:37 2018 +0300
+
+    pom.xml was added to project
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((8faa31b...))
+$ git checkout 694a3f
+Previous HEAD position was 8faa31b... pom.xml was added to project
+HEAD is now at 694a3fc... comment to pom.xml was added
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((694a3fc...))
+$ git remote add origin https://github.com/HTPTAT7/tat9_git_example.git
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((694a3fc...))
+$ git push -u origin master
+fatal: AggregateException encountered.
+   One or more errors occurred.
+fatal: AggregateException encountered.
+   One or more errors occurred.
+Username for 'https://github.com': HTPTAT7
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 791 bytes | 0 bytes/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/HTPTAT7/tat9_git_example.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((694a3fc...))
+$ touch .gitignore
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((694a3fc...))
+$ git status
+HEAD detached at 694a3fc
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .classpath
+        .gitignore
+        .project
+        .settings/
+        src/
+        target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((694a3fc...))
+$ git status
+HEAD detached at 694a3fc
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((694a3fc...))
+$ git add -A
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((694a3fc...))
+$ git status
+HEAD detached at 694a3fc
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   src/main/java/by/htp/git/entity/Letter.java
+        new file:   src/main/resources/config.properties
+        new file:   src/test/java/by/htp/git/smoke/SimpleTest.java
+        new file:   src/test/resources/test-config.properties
+
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((694a3fc...))
+$ git commit -m "project skeleton was created"
+[detached HEAD d059594] project skeleton was created
+ 5 files changed, 16 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 src/main/java/by/htp/git/entity/Letter.java
+ create mode 100644 src/main/resources/config.properties
+ create mode 100644 src/test/java/by/htp/git/smoke/SimpleTest.java
+ create mode 100644 src/test/resources/test-config.properties
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((d059594...))
+$ git log
+commit d059594b1200691c831b22303b7eefea966fc02f
+Author: Sviatlana Zakharenka <sviatlana_zakharenka@epam.com>
+Date:   Tue Jul 24 20:49:54 2018 +0300
+
+    project skeleton was created
+
+commit 694a3fcea8717148744d8457450fdffa7a3ca7b2
+Author: Sviatlana Zakharenka <sviatlana_zakharenka@epam.com>
+Date:   Tue Jul 24 19:58:08 2018 +0300
+
+    comment to pom.xml was added
+
+commit 8faa31b415920e0c34d671222c2854537cc56c0f
+Author: Sviatlana Zakharenka <sviatlana_zakharenka@epam.com>
+Date:   Tue Jul 24 19:52:37 2018 +0300
+
+    pom.xml was added to project
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((d059594...))
+$ git push
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push origin HEAD:<name-of-remote-branch>
+
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((d059594...))
+$ git push origin HEAD:master
+fatal: AggregateException encountered.
+   One or more errors occurred.
+fatal: AggregateException encountered.
+   One or more errors occurred.
+Username for 'https://github.com': HTPTAT7
+Counting objects: 22, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (22/22), 1.30 KiB | 0 bytes/s, done.
+Total 22 (delta 0), reused 0 (delta 0)
+To https://github.com/HTPTAT7/tat9_git_example.git
+   694a3fc..d059594  HEAD -> master
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((d059594...))
+$ git pull
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 10 (delta 1), reused 10 (delta 1), pack-reused 0
+Unpacking objects: 100% (10/10), done.
+From https://github.com/HTPTAT7/tat9_git_example
+   d059594..8509c24  master     -> origin/master
+You are not currently on a branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((d059594...))
+$ git pull origin master
+From https://github.com/HTPTAT7/tat9_git_example
+ * branch            master     -> FETCH_HEAD
+Updating d059594..8509c24
+Fast-forward
+ src/main/java/by/htp/git/entity/Letter.java | 3 +++
+ 1 file changed, 3 insertions(+)
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((8509c24...))
+$ git status
+HEAD detached from 694a3fc
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   src/main/java/by/htp/git/entity/Letter.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+g
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((8509c24...))
+$ git add -A
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((8509c24...))
+$ git commit -m "1 privet msg from dev1"
+[detached HEAD 1a26ba1] 1 privet msg from dev1
+ 1 file changed, 1 insertion(+)
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((1a26ba1...))
+$ git push
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push origin HEAD:<name-of-remote-branch>
+
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((1a26ba1...))
+$ git push origin HEAD:master
+fatal: AggregateException encountered.
+   One or more errors occurred.
+fatal: AggregateException encountered.
+   One or more errors occurred.
+Username for 'https://github.com': HTPTAT7
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (10/10), 672 bytes | 0 bytes/s, done.
+Total 10 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/HTPTAT7/tat9_git_example.git
+   8509c24..1a26ba1  HEAD -> master
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((1a26ba1...))
+$ git add -A
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((1a26ba1...))
+$ git commit -m "dev1 send privet msg to dev2"
+[detached HEAD 2e0817b] dev1 send privet msg to dev2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((2e0817b...))
+$ git push
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push origin HEAD:<name-of-remote-branch>
+
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((2e0817b...))
+$ git push origin HEAD:master
+fatal: AggregateException encountered.
+   One or more errors occurred.
+fatal: AggregateException encountered.
+   One or more errors occurred.
+Username for 'https://github.com': HTPTAT7
+To https://github.com/HTPTAT7/tat9_git_example.git
+ ! [rejected]        HEAD -> master (fetch first)
+error: failed to push some refs to 'https://github.com/HTPTAT7/tat9_git_example.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((2e0817b...))
+$ git pull
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 10 (delta 1), reused 10 (delta 1), pack-reused 0
+Unpacking objects: 100% (10/10), done.
+From https://github.com/HTPTAT7/tat9_git_example
+   1a26ba1..79c635a  master     -> origin/master
+You are not currently on a branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((2e0817b...))
+$ git pull origin master
+From https://github.com/HTPTAT7/tat9_git_example
+ * branch            master     -> FETCH_HEAD
+Auto-merging src/main/java/by/htp/git/entity/Letter.java
+CONFLICT (content): Merge conflict in src/main/java/by/htp/git/entity/Letter.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((2e0817b...)|MERGING)
+$ git status
+HEAD detached from 694a3fc
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   src/main/java/by/htp/git/entity/Letter.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((2e0817b...)|MERGING)
+$ git add -A
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((2e0817b...)|MERGING)
+$ git status
+HEAD detached from 694a3fc
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+        modified:   src/main/java/by/htp/git/entity/Letter.java
+
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((2e0817b...)|MERGING)
+$ git commit -m "hello msg conflict was resolved"
+[detached HEAD 0388071] hello msg conflict was resolved
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((0388071...))
+$ git push origin master
+fatal: AggregateException encountered.
+   One or more errors occurred.
+fatal: AggregateException encountered.
+   One or more errors occurred.
+Username for 'https://github.com': HTPTAT7
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/HTPTAT7/tat9_git_example.git/'
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((0388071...))
+$ git push origin master
+fatal: AggregateException encountered.
+   One or more errors occurred.
+fatal: AggregateException encountered.
+   One or more errors occurred.
+Username for 'https://github.com': HTPTAT7
+To https://github.com/HTPTAT7/tat9_git_example.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/HTPTAT7/tat9_git_example.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((0388071...))
+$ git push HEAD:master
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push HEAD:master HEAD:<name-of-remote-branch>
+
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((0388071...))
+$ git push origin HEAD:master
+fatal: AggregateException encountered.
+   One or more errors occurred.
+fatal: AggregateException encountered.
+   One or more errors occurred.
+Username for 'https://github.com': HTPTAT7
+Counting objects: 20, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (20/20), 1.32 KiB | 0 bytes/s, done.
+Total 20 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/HTPTAT7/tat9_git_example.git
+   79c635a..0388071  HEAD -> master
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev1 ((0388071...))
+$

@@ -1,0 +1,159 @@
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2
+$ git clone https://github.com/HTPTAT7/tat9_git_example.git
+Cloning into 'tat9_git_example'...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 1), reused 6 (delta 1), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2
+$ git clone https://github.com/HTPTAT7/tat9_git_example.git .
+Cloning into '.'...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 1), reused 6 (delta 1), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2 (master)
+$ git pull
+remote: Counting objects: 22, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 22 (delta 0), reused 22 (delta 0), pack-reused 0
+Unpacking objects: 100% (22/22), done.
+From https://github.com/HTPTAT7/tat9_git_example
+   694a3fc..d059594  master     -> origin/master
+Updating 694a3fc..d059594
+Fast-forward
+ .gitignore                                     | 4 ++++
+ src/main/java/by/htp/git/entity/Letter.java    | 5 +++++
+ src/main/resources/config.properties           | 1 +
+ src/test/java/by/htp/git/smoke/SimpleTest.java | 5 +++++
+ src/test/resources/test-config.properties      | 1 +
+ 5 files changed, 16 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 src/main/java/by/htp/git/entity/Letter.java
+ create mode 100644 src/main/resources/config.properties
+ create mode 100644 src/test/java/by/htp/git/smoke/SimpleTest.java
+ create mode 100644 src/test/resources/test-config.properties
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2 (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   src/main/java/by/htp/git/entity/Letter.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2 (master)
+$ git log
+commit d059594b1200691c831b22303b7eefea966fc02f
+Author: Sviatlana Zakharenka <sviatlana_zakharenka@epam.com>
+Date:   Tue Jul 24 20:49:54 2018 +0300
+
+    project skeleton was created
+
+commit 694a3fcea8717148744d8457450fdffa7a3ca7b2
+Author: Sviatlana Zakharenka <sviatlana_zakharenka@epam.com>
+Date:   Tue Jul 24 19:58:08 2018 +0300
+
+    comment to pom.xml was added
+
+commit 8faa31b415920e0c34d671222c2854537cc56c0f
+Author: Sviatlana Zakharenka <sviatlana_zakharenka@epam.com>
+Date:   Tue Jul 24 19:52:37 2018 +0300
+
+    pom.xml was added to project
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2 (master)
+$ git add -A
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2 (master)
+$ git commit -m "1 hello msg from dev2"
+[master 8509c24] 1 hello msg from dev2
+ 1 file changed, 3 insertions(+)
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2 (master)
+$ git push origin master
+fatal: AggregateException encountered.
+   One or more errors occurred.
+fatal: AggregateException encountered.
+   One or more errors occurred.
+Username for 'https://github.com': HTPTAT7
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (10/10), 691 bytes | 0 bytes/s, done.
+Total 10 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/HTPTAT7/tat9_git_example.git
+   d059594..8509c24  master -> master
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2 (master)
+$ git pull
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 10 (delta 2), reused 10 (delta 2), pack-reused 0
+Unpacking objects: 100% (10/10), done.
+From https://github.com/HTPTAT7/tat9_git_example
+   8509c24..1a26ba1  master     -> origin/master
+Updating 8509c24..1a26ba1
+Fast-forward
+ src/main/java/by/htp/git/entity/Letter.java | 1 +
+ 1 file changed, 1 insertion(+)
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2 (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   src/main/java/by/htp/git/entity/Letter.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2 (master)
+$ git add -A
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2 (master)
+$ git commit -m "dev2 recieved privet msg from dev1"
+[master 79c635a] dev2 recieved privet msg from dev1
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2 (master)
+$ git push
+fatal: AggregateException encountered.
+   One or more errors occurred.
+fatal: AggregateException encountered.
+   One or more errors occurred.
+Username for 'https://github.com': HTPTAT7
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (10/10), 724 bytes | 0 bytes/s, done.
+Total 10 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/HTPTAT7/tat9_git_example.git
+   1a26ba1..79c635a  master -> master
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2 (master)
+$ git pull
+remote: Counting objects: 20, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 20 (delta 4), reused 20 (delta 4), pack-reused 0
+Unpacking objects: 100% (20/20), done.
+From https://github.com/HTPTAT7/tat9_git_example
+   79c635a..0388071  master     -> origin/master
+Updating 79c635a..0388071
+Fast-forward
+ src/main/java/by/htp/git/entity/Letter.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Sviatlana_Zakharenka@EPBYMINW0824 MINGW64 /c/D/git-train-htp9/dev2 (master)
+$
